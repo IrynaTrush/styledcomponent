@@ -7,6 +7,7 @@ export const SignUpWrapper = styled.div`
   background-color: #004080;
   border-radius: 30px;
   padding-top: 60px;
+  box-shadow: 5px 5px 10px  #001a33;
 `;
 
 export const SmallInput = styled.input`
