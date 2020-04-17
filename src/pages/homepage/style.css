@@ -1,0 +1,21 @@
+.link {
+    font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #80aaff;
+  text-decoration: none;
+  font-size: 12px;
+  
+}
+
+.link:hover{
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.textWrapper {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
