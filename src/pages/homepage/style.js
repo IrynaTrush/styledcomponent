@@ -31,7 +31,7 @@ export const WelcomeTitle = styled.h1`
    text-shadow: 5px 5px 5px;
 `;
 
-export const SignInForn = styled.form`
+export const SignInForm = styled.form`
    width: 80%;
    margin: 0 auto;
    
@@ -71,6 +71,12 @@ export const Input = styled.input`
   color: white;
   border-radius: 5px;
   margin-bottom: 15px;
+  ${props => 
+    props.valid === undefined ? "border-color: #888; color: #888;" :
+    props.valid ? 
+      "border-color: #00b300; color: #00b300;" :
+      "border-color: #b32400; color: #b32400;"
+  }
 `;
 
 export const Checkbox = styled.input`
@@ -93,12 +99,14 @@ export const ButtonInput = styled.button`
   justify-content: center;
   text-transform: uppercase;
   font-size: 13px;
+  ${props => props.isDisabled ? "cursor: not-allowed;" : "cursor: pointer;"}
   &:hover {
    background-color: #b3ccff;
    transform: scale(1.02);
    transition: all 0.3s;
-   cursor: pointer;
+   
   }
+  
 `;
 
 export const Copyright = styled.p`
@@ -110,4 +118,12 @@ export const Copyright = styled.p`
   color:#00091a ;
   margin-top: 30px;
   text-align: center;
+`;
+
+export const Error = styled.div`
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin: -15px 0 10px 30px;
+  font-size: 12px;
+  color: #4d0000;
 `;

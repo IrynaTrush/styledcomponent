@@ -22,4 +22,10 @@ export const SmallInput = styled.input`
   color: white;
   border-radius: 5px;
   margin-bottom: 15px;
+  ${props => 
+    props.valid === undefined ? "border-color: #888; color: #888;" :
+    props.valid ? 
+      "border-color: #00b300; color: #00b300;" :
+      "border-color: #b32400; color: #b32400;"
+  }
 `;
